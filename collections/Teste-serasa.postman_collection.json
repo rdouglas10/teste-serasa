@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "908aae1e-844e-422a-b3a2-e313bd3ba47e",
+		"name": "Teste-serasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Produtor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf_cnpj\": \"01201753000128\",\n    \"nome_produtor\": \"Florência Diniz\",\n    \"nome_fazenda\": \"Fazenda sapo boi\",\n    \"cidade\": \"Maceió\",\n    \"estado\": \"AL\",\n    \"area_total\": \"90000\",\n    \"area_agricultavel\": \"50000\",\n    \"area_vegetacao\": \"30000\",\n    \"culturas\": \"Soja\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/produtores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Produtor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome_produtor\": \"Fracisgleidson Castilho Filho\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/produtores/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"produtores",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produtor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/produtores/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"produtores",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get totais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/produtor/01201753000128/totais",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"produtor",
+						"01201753000128",
+						"totais"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Produtor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/produtor/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"produtor",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
